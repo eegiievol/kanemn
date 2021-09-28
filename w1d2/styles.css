@@ -1,0 +1,47 @@
+.intro {
+	font-family: Verdana;
+	color: #1D8348;
+	text-align: center;
+}
+.intro:hover {
+	font-weight: bold;
+}
+
+#name {
+	font-weight: bold;
+}
+
+h2{
+	color: #5B2C6F;
+	font-size: 13pt;
+	font-family: tahoma;	
+}
+
+.quote {
+	font-style: italic;
+}
+
+img#happy{
+	content:url(resources/happy.jpg);
+	height: auto;
+	max-height: 200px;
+}
+
+img#sad{
+	content:url(resources/sad.png);
+	height: auto;
+	width: auto;
+	max-height: 200px;
+}
+
+#neighbors {
+	color: #A93226;
+}
+
+#classes {
+	color: #0E6655;
+}
+
+#movies {
+	color: #2874A6;
+}
