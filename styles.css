@@ -22,13 +22,13 @@ h2{
 }
 
 img#happy{
-	content:url(resources/happy.jpg);
+	
 	height: auto;
 	max-height: 200px;
 }
 
 img#sad{
-	content:url(resources/sad.png);
+	
 	height: auto;
 	width: auto;
 	max-height: 200px;
