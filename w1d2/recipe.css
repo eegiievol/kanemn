@@ -1,4 +1,10 @@
+/* 
+Student: Eggy
+Pie recipe page's CSS
+*/
+
 body{
+	width: 1024px;
 	background-image: url('recipeImages/silverware.jpg');
 	color: #404040;
 	font-family: Georgia,Garamond,Sans;
@@ -6,13 +12,18 @@ body{
 }
 
 img#pie{
-	content:url(recipeImages/pie.jpg);
-	
+	content:url(recipeImages/pie.jpg);	
 }
 
-ul {
-	list-style-image: url('recipeImages/pie_bullet.png');
+ol ul {
+	list-style-image: url('recipeImages/pie_bullet.png');	
 }
+
+
+ul.ingred {
+	list-style-type: square;
+}
+
 
 h2{
 	font-family: Lucida Sans Unicode, Helvetica, Arial, Sans;
@@ -24,21 +35,22 @@ h2{
 }
 
 a{
-	color: #A4A400;
-	
+	color: #A4A400;	
 }
 
 h2.main{
 	text-align: center;
 	font-size: 22pt;
 	font-weight: bold;
-	
 }
 
+.strong{
+	font-weight: bold;
+}
 
-
-p.strong{
-	font-weight: bold;	
+/*for learning*/
+ol li .bold{
+	font-weight: bold;
 }
 
 p.comment{
@@ -47,7 +59,9 @@ p.comment{
 }
 
 .tooltip {
-  position: relative;
+    position: relative;
+    display: inline-block;
+    text-decoration: underline;
 }
 
 .tooltip .tooltiptext {
@@ -55,9 +69,7 @@ p.comment{
   background-color: #E9967A;
   color: #fff;
   text-align: center;
-  border-radius: 6px;
-
-  /* Position the tooltip */
+  border-radius: 6px; 
   position: absolute;
   z-index: 1;
 }
@@ -70,9 +82,10 @@ p.comment{
     text-decoration: line-through;
 }
 
-div#copyright>p{
+div#copyright>pre{
 	width: 33%;
 	text-align: right;
 	font-style: bold;
 	font-family: monospace;
 }
+
