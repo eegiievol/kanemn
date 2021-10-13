@@ -1,0 +1,31 @@
+.controller {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    position: fixed;
+    bottom: 0;
+    left: 33%;
+    background: #f8f8f8;
+    padding: 1rem;
+    border: 1px solid #6d6d6d;
+    border-radius: 6px 6px 0 0;
+  }
+  
+  .controller input {
+    margin: 0.25rem 0 0.5rem;
+    height: 1.5rem;
+  }
+  
+  .controller > button {
+    margin-top: 0.5rem;
+    height: 2rem;
+    cursor: pointer;
+    background-color: teal;
+    color: #fff;
+    border: none;
+    opacity: 0.8;
+  }
+  
+  .controller > button:hover {
+    opacity: 1;
+  }
