@@ -8,7 +8,7 @@ var ended = false;
 function lose(evt) {
     if (!ended) {
         $(".boundary").css({"background-color": "red"});
-        $("#status").text("YOU HAVE LOST");
+        $("#status").text("YOU HAVE LOST!!");
         ended = true;
     }
 }
@@ -21,7 +21,7 @@ let win = () => {
 }   
 
 function gameStarts(){
-    $("#status").text("Click the \"S\" to begin.");
+    $("#status").text("Game started... HAVE FUN!!");
     $(".boundary").css({"background-color": "#eeeeee"});
     $(".boundary").on('mouseover', lose);
     $("#maze").on('mouseleave', lose);
