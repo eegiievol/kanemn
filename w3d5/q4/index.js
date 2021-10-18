@@ -29,14 +29,18 @@ app.get("/", (req, res) => {
 });
 
 app.post("/result", (req,res)=>{
-    res.redirect(303, "/output?name=${name}&age=${age}")
+    let name = req.body.name;
+    let age = req.body.age;
+    res.redirect(303, `/output?name=${name}&age=${age}`);
 });
 
 app.get("/output", (req,res)=>{
-    let name = req.body.name;
-    let age = req.body.age;
-    if(!name){name="person";}
-    if(!age){age=0;}
+    let name = req.query.name;
+    let age = req.query.age;
+
+    if(!name){name="unknown";}
+    if(!age){age=-1;}
+
     res.send(`Welcome ${name}, age ${age}`);
 
 });
