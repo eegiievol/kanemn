@@ -54,7 +54,12 @@ let products = [
     }
 ];
 
-
+app.use((req,res,next)=>{
+    if(!req.session['cart']){
+        req.session['cart'] = {}
+    }
+    next()
+})
 
 app.get('/', (req, res) => {
     res.render("shop", {
@@ -66,14 +71,14 @@ app.get('/product/:id', (req, res) => {
     const id = req.params.id
     const product = products.find(p => p.id == id);
 
-    const cart = req.session['cart'] || {};
-    const itemsQuantity = Object.keys(cart)
+    const cart = req.session['cart'];
+    const quantity = Object.keys(cart)
         .map(key => cart[key].quantity)
         .reduce((a, b) => a + b, 0);
 
     res.render("product", {
         product: product,
-        itemsQuantity: itemsQuantity
+        quantity: quantity
     });
 });
 
@@ -96,12 +101,12 @@ app.post('/cart', (req, res) => {
     //save back to session
     req.session['cart'] = cart;
 
-    const itemsQuantity = Object.keys(cart)
+    const quantity = Object.keys(cart)
         .map(key => cart[key].quantity)
         .reduce((a, b) => a + b, 0);
 
     res.status(200);
-    res.end(itemsQuantity.toString());
+    res.end(quantity.toString());
 });
 
 app.get('/cart', (req, res) => {

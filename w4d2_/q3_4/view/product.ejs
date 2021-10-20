@@ -7,6 +7,9 @@
         <%= product.name %>
     </title>
     <link rel="stylesheet" type="text/css" href="/css/product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="/js/product.js"></script>
 </head>
 
 <body>
@@ -28,6 +31,14 @@
                         <input type="text" id="price" name="price" value="<%= product.price %>">
                         <input class="add-card-btn" type="submit" value="Add to cart">
                     </form>
+                    <div class="go-cart">
+                        <a href="/cart">
+                            <i class="fa fa-shopping-cart"><span id="cart-quantity">
+                                    <%= quantity %>
+                                </span></i>
+                        </a>
+                        <span id="msg"></span>
+                    </div>
                 </div>
             </div>
         </div>
