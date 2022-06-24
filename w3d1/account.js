@@ -1,7 +1,7 @@
 "use strict";
 
 /**
- * A Bank Account class
+ * A Bank Account class .
  * 
  * Provides the basic functionality that every account should have
  */
